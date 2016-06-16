@@ -1,4 +1,4 @@
-# Developer-Pro-Tips
+# Developer Pro-tips
 A collection of rules to ensure success in your development career.
 
 # Coding Tips
