@@ -4,7 +4,7 @@ A collection of rules to ensure success in your development career.
 # Coding Tips
 - Understand the full scope
   - If you are making a code change, you need to understand the full scope of that change (the full method, whatever the scope is).
-- Look up your project and language conventions
+- Look up your project's and language's conventions
   - Look up the naming conventions of the project you're working on and follow them. If there are none look up the language conventions.
   - e.g. C# suggests private stuff gets camelCase and public stuff (things you can see outside of an object) gets PascalCase 
 - DRY: don't repeat yourself
@@ -24,3 +24,9 @@ A collection of rules to ensure success in your development career.
   - Code may feel like art when you are writing it, but it's a machine built to work. Solicit improvements from peers.
 - Your code is your teams' code
   - And vice versa
+- Use source control well
+  - Look up its conventions too. Here are [10 commandments of good source control management](https://www.troyhunt.com/10-commandments-of-good-source-control/)
+- It's harder to read code than to write it
+  - Assume the next person to read your code is not you and that you have a sudden onset of amnesia. 
+  
+
