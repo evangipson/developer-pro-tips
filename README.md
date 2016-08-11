@@ -27,6 +27,8 @@ A collection of rules to ensure success in your development career.
 - Use source control well
   - Look up its conventions too. Here are [10 commandments of good source control management](https://www.troyhunt.com/10-commandments-of-good-source-control/)
 - It's harder to read code than to write it
-  - Assume the next person to read your code is not you and that you have a sudden onset of amnesia. 
+  - Assume the next person to read your code is not you and that you have a sudden onset of amnesia.
+- Seperate your concerns
+  - Write display logic in CSS, write behavior logic in JavaScript, write out DOM structure in HTML.
   
 
