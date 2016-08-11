@@ -28,7 +28,8 @@ A collection of rules to ensure success in your development career.
   - Look up its conventions too. Here are [10 commandments of good source control management](https://www.troyhunt.com/10-commandments-of-good-source-control/)
 - It's harder to read code than to write it
   - Assume the next person to read your code is not you and that you have a sudden onset of amnesia.
-- Seperate your concerns
+- Separate your concerns
   - Write display logic in CSS, write behavior logic in JavaScript, write out DOM structure in HTML.
+  - You don't want to call in a JavaScript guy to change an image color, and you don't want to call a CSS guy to add and remove a class from an element conditionally.
   
 
