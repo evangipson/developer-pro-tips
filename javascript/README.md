@@ -1,6 +1,14 @@
 ## JavaScript tips
 - Function Declarations are **hoisted** to the top of the program by the JavaScript interpereter. They are intended to mimic the Java style of development.
+  - Example Function Declaration:
+```
+function foo() { //function contents }
+```
 - Function Expressions are not hoisted, but they are represented as variables or even anonymous functions, and therefore are more flexible than Function Declarations.
+  - Example Function Expression (note the semi-colon, it *is* a variable after all):
+```
+var foo = function() { //function contents };
+```
 - Variables have **function scope**
 - Variables are **softly typed**
 
