@@ -1,7 +1,5 @@
 # Developer Pro-tips
-A collection of rules to ensure success in your development career.
-
-# Coding Tips
+A collection of rules to ensure success in your development career, licensed under <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 - Understand the full scope
   - If you are making a code change, you need to understand the full scope of that change (the full method, whatever the scope is).
 - Look up your project's and language's conventions
