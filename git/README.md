@@ -1,4 +1,5 @@
 ## Git/github tips
+- Review your "git status" and "git diff" before committing to make sure there are no unexpected changes.
 - You can switch to the previous branch you were on by using the shortcut "git checkout -"
 - You can reword your previous commit message by using the command "git commit -v --amend"
 - Use "git stash" to save changes that aren't currently committed without committing.
