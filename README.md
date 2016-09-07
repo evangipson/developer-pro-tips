@@ -5,6 +5,7 @@ A collection of rules to ensure success in your development career, licensed und
 - Look up your project's and language's conventions
   - Look up the naming conventions of the project you're working on and follow them. If there are none look up the language conventions.
   - e.g. C# suggests private stuff gets camelCase and public stuff (things you can see outside of an object) gets PascalCase 
+- Before trying to solve a problem, make sure it occurs.
 - DRY: don't repeat yourself
   - don't duplicate code and if you must then comment clearly that you are doing so in both places.
 - Automate repetitive tasks
