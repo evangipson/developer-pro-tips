@@ -1,5 +1,8 @@
 ## Git/github tips
 - Review your "git status" and "git diff" before committing to make sure there are no unexpected changes.
+- When writing a "git commit" message, make sure to keep it imperative and under 50 characters.
+  - Remember that the description doesn't have a character limit! If you need to explain something, do it in the description and keep the commit message imperative!
+  - Use the [seven rules of git committing](http://chris.beams.io/posts/git-commit/#seven-rules) if you don't know how to name your commit.
 - You can switch to the previous branch you were on by using the shortcut "git checkout -"
 - You can reword your previous commit message by using the command "git commit -v --amend"
 - Use "git stash" to save changes that aren't currently committed without committing.
