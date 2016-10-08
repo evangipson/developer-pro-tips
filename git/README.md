@@ -1,5 +1,6 @@
 ## Git/github tips
-- Review your "git status" and "git diff" before committing to make sure there are no unexpected changes.
+- To create a new branch, use "git checkout -b new_branch_name" when on an up-to-date master.
+- Review your "git status" and "git diff" to review your changes before committing to make sure there is no unexpected spacing or semantic errors.
 - When writing a "git commit" message, make sure to keep it imperative and under 50 characters.
   - Remember that the description doesn't have a character limit! If you need to explain something, do it in the description and keep the commit message imperative!
   - Use the [seven rules of git committing](http://chris.beams.io/posts/git-commit/#seven-rules) if you don't know how to name your commit.
