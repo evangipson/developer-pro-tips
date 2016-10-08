@@ -24,7 +24,7 @@ class Foo {}
 class Foo {}
 var foo = new Foo();
 ```
-- Class Expressions are also **not hoisted**. There are both Named Class Expressions and Unnamed Class Expressions. An Unnamed Class Expression will act as an anonymous Object, so if you want clarity or readability, using Named Class Expressions is a good idea
+- Class Expressions are also **not hoisted**. There are both Named Class Expressions and Unnamed Class Expressions. An Unnamed Class Expression will act as an anonymous Object, so if you want clarity or readability, using Named Class Expressions is a good idea.
 ```javascript
 // Example of Unnamed Class Expression:
 
