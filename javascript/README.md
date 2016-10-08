@@ -7,7 +7,7 @@ function foo() { /* function contents */ }
 ```
 - Function Expressions are not hoisted, but they are represented as variables or even anonymous functions, and therefore are more flexible than Function Declarations.
 ```javascript
-// Example Function Expression (note the semi-colon it *is* a variable after all):
+// Example Function Expression (note the semi-colon... it *is* a variable after all):
 
 var foo = function() { /* function contents */ };
 ```
