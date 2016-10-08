@@ -56,6 +56,47 @@ console.log(Bar); // throws "Uncaught ReferenceError: Bar is not defined"
 - Variables have **function scope**
 - Variables are **softly typed**
 - If you'd like to break your javascript into multiple files, you're going to have utilize a **module pattern**, with some *loose augmentation*.
+```javascript
+// File A, or the file that needs to load first.
+
+/* FOO isn't created yet, and that's what the "FOO || {}" is
+ * doing in the Loosely Augmented Function Expression below.
+ * The logic is "if we don't already have a FOO defined, let's make
+ * one, otherwise, we can just augment the existing FOO (fooModule)
+ * before we return it. */
+
+var FOO = (function(fooModule) {
+  // Initial data
+  fooModule.greeting = "Hello";
+  // Ensure our other file has access
+  // the .greeting we set up above by returning
+  // the module before FOO has finished executing.
+  return fooModule;
+}}(FOO || {})); // Loosely Augmented Function Expression
+```
+```javascript
+// File B, or the file that depends on File A to load.
+
+/* The gist here is that File A creates the "FOO" variable,
+ * and the declaration in File B takes in a parameter (fooModule)
+ * so you'll have everything you need from File A in fooModule already,
+ * and then harmlessly add functionality in File B before returning it
+ * for use in File B anywhere below Foo's instantiation. */
+
+var FOO = (function(fooModule) {
+  // Augmentation
+  fooModule.augmentedGreeting = function() {
+    return fooModule.greeting + " World!";
+  }
+  // If we want external code to call the
+  // augmentedGreeting function expression
+  // above, we need to give back the internal
+  // module we augmented.
+  return fooModule;
+}(FOO)); // Augmented Function Expression
+
+FOO.augmentedGreeting(); // returns "Hello World!"
+```
 
 ## Terminology
 **Hoisted:** Function declarations and function variables are always moved (‘hoisted’) to the top of their JavaScript scope by the JavaScript interpreter.
