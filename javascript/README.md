@@ -5,7 +5,7 @@
 
 function foo() { /* function contents */ }
 ```
-- Function Expressions are not hoisted, but they are represented as variables or even anonymous functions, and therefore are more flexible than Function Declarations.
+- Function Expressions are **not hoisted**, but they are represented as variables or even anonymous functions, and therefore are more flexible than Function Declarations.
 ```javascript
 // Example Function Expression (note the semi-colon... it *is* a variable after all):
 
@@ -23,6 +23,33 @@ class Foo {}
 
 class Foo {}
 var foo = new Foo();
+```
+- Class Expressions are also **not hoisted**. There are both Named Class Expressions and Unnamed Class Expressions. An Unnamed Class Expression will act as an anonymous Object, so if you want clarity or readability, using Named Class Expressions is a good idea
+```javascript
+// Example of Unnamed Class Expression
+var Foo = class {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+};
+```
+- The name of the class in the Named Class expression is scoped to the class's body.
+```javascript
+// Example of Named Class Expression
+var Foo = class Bar {
+  static greetingPrefix() {
+    return 'Hello';
+  }
+  greeting() {
+    return Bar.greeting();
+  }
+};
+// Instantiate our class after we express it
+// because class expressions aren't hoisted.
+const foo = new Foo();
+console.log(Foo.greeting()); // returns "Hello"
+console.log(Bar); // throws "Uncaught ReferenceError: Bar is not defined"
 ```
 - Variables have **function scope**
 - Variables are **softly typed**
