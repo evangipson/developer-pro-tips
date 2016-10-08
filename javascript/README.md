@@ -57,20 +57,20 @@ console.log(Bar); // throws "Uncaught ReferenceError: Bar is not defined"
 ```javascript
 // Example of function scope:
 
-console.log("variable i: " + i); // Prints "Uncaught ReferenceError: i is not defined"
+console.log("variable i: " + i); // Prints "variable i: undefined"
 
 var i = 0;
-console.log("variable i: " + i); // Prints "0"
+console.log("variable i: " + i); // Prints "variable i: 0"
 
 function runThrough() {
   for(var i = 1; i <= 10; i++) {
-    console.log("variable i: " + i); // Prints 1-10
+    console.log("variable i: " + i); // Prints "variable i: 1-10"
   }
-  console.log("variable i: " + i); // Prints "10"
+  console.log("variable i: " + i); // Prints "variable i: 11"
 }
 
 runThrough(); // Prints all the console.logs defined in runThrough()
-console.log("variable i: " + i); // Prints "0"
+console.log("variable i: " + i); // Prints "variable i: 0"
 ```
 - Variables are **softly typed**
 - If you'd like to break your javascript into multiple files, you're going to have utilize a **module pattern**, with some *loose augmentation*.
