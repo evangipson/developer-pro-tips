@@ -26,7 +26,8 @@ var foo = new Foo();
 ```
 - Class Expressions are also **not hoisted**. There are both Named Class Expressions and Unnamed Class Expressions. An Unnamed Class Expression will act as an anonymous Object, so if you want clarity or readability, using Named Class Expressions is a good idea
 ```javascript
-// Example of Unnamed Class Expression
+// Example of Unnamed Class Expression:
+
 var Foo = class {
   constructor(height, width) {
     this.height = height;
@@ -36,7 +37,8 @@ var Foo = class {
 ```
 - The name of the class in the Named Class expression is scoped to the class's body.
 ```javascript
-// Example of Named Class Expression
+// Example of Named Class Expression:
+
 var Foo = class Bar {
   static greetingPrefix() {
     return 'Hello';
