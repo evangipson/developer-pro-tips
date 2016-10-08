@@ -73,6 +73,56 @@ runThrough(); // Prints all the console.logs defined in runThrough()
 console.log("variable i: " + i); // Prints "variable i: 0"
 ```
 - Variables are **softly typed**
+```javascript
+// Example of softly typed variables:
+
+function logI() {
+  console.log("type of i is " + typeof(i) + ", value: " + i);
+}
+
+function startAsArray() {
+  i = [];
+  logI(); // prints "type of i is object, value: "
+
+  i += 1;
+  logI(); // prints "type of i is string, value: 1"
+
+  i += "1";
+  logI(); // prints "type of i is string, value: 11"
+
+  i -= 1;
+  logI(); // prints "type of i is number, value: 10"
+}
+
+function startAsObject() {
+  i = {};
+  logI(); // prints "type of i is object, value: [object Object]"
+
+  i += 1;
+  logI(); // prints "type of i is string, value: [object Object]1"
+
+  i += "1";
+  logI(); // prints "type of i is string, value: [object Object]11"
+
+  i -= 1;
+  logI(); // prints "type of i is number, value: NaN"
+}
+
+function startAsIncrement() {
+  i += 1;
+  logI(); // prints "type of i is number, value: NaN"
+
+  i += "1";
+  logI(); // prints "type of i is string, value: NaN1"
+
+  i -= 1;
+  logI(); // prints "type of i is number, value: NaN"
+}
+
+startAsArray();
+startAsObject();
+startAsIncrement();
+```
 - If you'd like to break your javascript into multiple files, you're going to have utilize a **module pattern**, with some *loose augmentation*.
 ```javascript
 // File A, or the file that needs to load first.
