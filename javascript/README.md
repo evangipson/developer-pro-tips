@@ -1,17 +1,30 @@
 ## JavaScript tips
-- Function Declarations are **hoisted** to the top of the program by the JavaScript interpereter. They are intended to mimic the Java style of development.
+- [Function Declarations](#function-declarations)
+- [Function Expressions](#function-expressions)
+- [Class Declarations](#class-declarations)
+- [Class Expressions](#class-expressions)
+- [Named Class Expressions](#named-class-expressions)
+- [Function Scope](#function-scope)
+- [Softly Typed](#softly-typed)
+- [Module Patterns](#module-patterns)
+- [Terminology](#terminology)
+
+### Function Declarations
+***Function Declarations*** are **hoisted** to the top of the program by the JavaScript interpereter. They are intended to mimic the Java style of development.
 ```javascript
 // Example Function Declaration:
 
 function foo() { /* function contents */ }
 ```
-- Function Expressions are **not hoisted**, but they are represented as variables or even anonymous functions, and therefore are more flexible than Function Declarations.
+### Function Expressions
+***Function Expressions*** are **not hoisted**, but they are represented as variables or even anonymous functions, and therefore are more flexible than Function Declarations.
 ```javascript
 // Example Function Expression (note the semi-colon... it *is* a variable after all):
 
 var foo = function() { /* function contents */ };
 ```
-- Class Declarations are **not hoisted**, so you need to declare your class before you attempt to instantiate it.
+### Class Declarations
+***Class Declarations*** are **not hoisted**, so you need to declare your class before you attempt to instantiate it.
 ```javascript
 // Example of incorrect Class Declaration:
 
@@ -24,7 +37,8 @@ class Foo {}
 class Foo {}
 var foo = new Foo();
 ```
-- Class Expressions are also **not hoisted**. There are both Named Class Expressions and Unnamed Class Expressions. An Unnamed Class Expression will act as an anonymous Object, so if you want clarity or readability, using Named Class Expressions is a good idea.
+### Class Expressions
+***Class Expressions*** are also **not hoisted**. There are both Named Class Expressions and Unnamed Class Expressions. An Unnamed Class Expression will act as an anonymous Object, so if you want clarity or readability, using Named Class Expressions is a good idea.
 ```javascript
 // Example of Unnamed Class Expression:
 
@@ -35,7 +49,8 @@ var Foo = class {
   }
 };
 ```
-- The name of the class in the Named Class expression is scoped to the class's body.
+### Named Class Expressions
+The name of the class in the ***Named Class Expression*** is scoped to the class's body.
 ```javascript
 // Example of Named Class Expression:
 
@@ -53,7 +68,8 @@ const foo = new Foo();
 console.log(Foo.greeting()); // returns "Hello"
 console.log(Bar); // throws "Uncaught ReferenceError: Bar is not defined"
 ```
-- Variables have **function scope**
+### Function Scope
+Variables have ***function scope***
 ```javascript
 // Example of function scope:
 
@@ -72,7 +88,8 @@ function runThrough() {
 runThrough(); // Prints all the console.logs defined in runThrough()
 console.log("variable i: " + i); // Prints "variable i: 0"
 ```
-- Variables are **softly typed**
+### Softly Typed
+Variables are ***softly typed***
 ```javascript
 // Example of softly typed variables:
 
@@ -123,7 +140,8 @@ startAsArray();
 startAsObject();
 startAsIncrement();
 ```
-- If you'd like to break your javascript into multiple files, you're going to have utilize a **module pattern**, with some *loose augmentation*.
+### Module Patterns
+- If you'd like to break your javascript into multiple files, you're going to have utilize a ***module pattern***, with some **loose augmentation**.
 ```javascript
 // File A, or the file that needs to load first.
 
