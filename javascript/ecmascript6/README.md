@@ -13,7 +13,7 @@ It's as easy as that!
   - [Using let, const, and var](#using-let-const-and-var)
 - [Default Parameters](#default-parameters)
 - [Rest Parameters](#rest-parameters)
-- [Spread Syntax[(#spread-syntax)
+- [Spread Syntax](#spread-syntax)
 
 ## Block Scope
 Variables can now have their scope limited to the block of code they are in, instead of the function. To make your variable block scope, use `let` or `const`.
