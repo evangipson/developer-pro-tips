@@ -13,6 +13,7 @@ It's as easy as that!
   - [Using let, const, and var](#using-let-const-and-var)
 - [Default Parameters](#default-parameters)
 - [Rest Parameters](#rest-parameters)
+- [Spread Syntax[(#spread-syntax)
 
 ## Block Scope
 Variables can now have their scope limited to the block of code they are in, instead of the function. To make your variable block scope, use `let` or `const`.
@@ -47,4 +48,21 @@ f(1, 1); // returns 2
 f(1, 1, 1); // returns 3
 f(1, 1, 1, 2, 3, 4); // returns 6
 f(1, 1, [1, 1], [1, 1]); // returns 4
+```
+
+## Spread Syntax
+*Spread syntax* is a tool to expand expressions where multiple arguments, variables, or elements are expected.
+```javascript
+// For function calls
+f(...iterableObj);
+// For array literals
+[...iterableObj, 4, 5, 6];
+
+// Copy an array using spread syntax
+var arr = [1,2,3];
+var arr2 = [...arr];
+arr2.push(4); 
+
+// arr2 becomes [1,2,3,4]
+// arr remains unaffected
 ```
