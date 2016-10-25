@@ -28,6 +28,8 @@ If you want a function-scoped variable, use `var`, unless you don't want the var
 ## Default Parameters
 Parameters can have their values set in the function declaration, and then they are optional when the function is called. If they are passed when the function is invoked, the value passed in overwrites the default value.
 ```javascript
+// Example of Default Parameters
+
 f(x, y = 1, z = 10) {
  return x + y + z;
 }
@@ -41,6 +43,8 @@ f(100, 0); // returns 110
 ## Rest Parameters
 The *rest parameter* syntax represents an undetermined number of arguments as an array.
 ```javascript
+// Example of Rest Parameters
+
 f(x, y, ...z) {
   return x + y + z.length;
 }
@@ -53,6 +57,8 @@ f(1, 1, [1, 1], [1, 1]); // returns 4
 ## Spread Syntax
 *Spread syntax* is a tool to expand expressions where multiple arguments, variables, or elements are expected.
 ```javascript
+// Example of Spread Syntax
+
 // For function calls
 f(...iterableObj);
 // For array literals
