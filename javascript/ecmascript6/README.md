@@ -1,5 +1,5 @@
 ## What *is* Ecmascript 6?
-EcmaScript 6, also known as ECMAScript 2015, is a standard created for JavaScript. EcmaScript aims to be an improvement to the rigidity, reliability, and formality of JavaScript.
+EcmaScript 6, also known as ECMAScript 2015, is a standard created for JavaScript. EcmaScript aims to be an improvement to the rigidity, reliability, and formality of JavaScript. You can see a great concise [list of all the features here](http://es6-features.org/).
 
 ## How do I use it?
 It's easy! In any [supported browser](http://kangax.github.io/compat-table/es6/), use the following line:
