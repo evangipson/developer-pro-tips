@@ -13,3 +13,9 @@
   - "git stash clear" will remove all stashes.
 - If a file is persisting to be modified even after a checkout, try to remove your git cache by running the command "git rm --cached -r ." in the root directory.
   - After the git rm you will have to reset your branch to the HEAD by running "git reset --hard"
+- If you need to use code hosted on github, you should use [rawgit](http://rawgit.com/) to build your ```<script src``` urls.
+  - Old way: ```<script src="https://github.com/user/repo/branch/file"></script>```
+  - New, better way: ```<script src="http://rawgit.com/user/repo/branch/file"></script>```
+  - An even better way: ```<script src="http://cdn.rawgit.com/user/repo/release/file"></script>```
+    - *Note this needs a release, not a branch*
+  - [Good explanation of why this is needed](http://stackoverflow.com/questions/17341122/link-and-execute-external-javascript-file-hosted-on-github)
