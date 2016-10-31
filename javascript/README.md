@@ -1,6 +1,7 @@
 ## JavaScript tips
 - [Function Declarations](#function-declarations)
 - [Function Expressions](#function-expressions)
+- [Immediately Invoked Function Expressions](#immediately-invoked-function-expressions)
 - [Class Declarations](#class-declarations)
 - [Class Expressions](#class-expressions)
 - [Named Class Expressions](#named-class-expressions)
@@ -22,6 +23,13 @@ function foo() { /* function contents */ }
 // Example Function Expression (note the semi-colon... it *is* a variable after all):
 
 var foo = function() { /* function contents */ };
+```
+### Immediately Invoked Function Expressions
+***IIFE***s are **function expressions** which are **immediately invoked**. IFFEs are **not hoisted**. IIFEs are denoted with parenthesis wrapping each side of the IIFE, as well as empty parenthesis at the end of the IIFE (denoting the function should be executed immediately after it's created).
+```javascript
+// Example Immediately Invoked Function Expressions
+
+var foo = (function() { /* function contents */ })();
 ```
 ### Class Declarations
 ***Class Declarations*** are **not hoisted**, so you need to declare your class before you attempt to instantiate it.
