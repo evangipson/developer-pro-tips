@@ -29,7 +29,7 @@ var foo = function() { /* function contents */ };
 ```javascript
 // Example Immediately Invoked Function Expressions
 
-var foo = (function() { /* function contents */ })();
+(function() { /* function contents */ })(); // function will immediately execute
 ```
 ### Class Declarations
 ***Class Declarations*** are **not hoisted**, so you need to declare your class before you attempt to instantiate it.
