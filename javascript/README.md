@@ -5,6 +5,7 @@
 - [Class Declarations](#class-declarations)
 - [Class Expressions](#class-expressions)
 - [Named Class Expressions](#named-class-expressions)
+- [For Loops](#for-loops)
 - [Function Scope](#function-scope)
 - [Softly Typed](#softly-typed)
 - [Module Patterns](#module-patterns)
@@ -75,6 +76,21 @@ var Foo = class Bar {
 const foo = new Foo();
 console.log(Foo.greeting()); // returns "Hello"
 console.log(Bar); // throws "Uncaught ReferenceError: Bar is not defined"
+```
+### For Loops
+For loops will run code a defined amount of times. There are a couple kinds of for loops. You can use the syntax ```for(var i = 0; i < condition; i++)```. This will run the code ```condition``` times. For...in is used for objects generally, and ignores the default prototype properties of the object, but not inherited prototype properties. For...in loops have the syntax ```for(var key in object)```. Generally you should be using for loops if you can.
+```javascript
+// Example of for loop:
+
+for(var i = 0; i < 5; i++) {
+  console.log(i); // Prints 0 - 4
+}
+
+// Example of for...in loop:
+
+for(var key in object) {
+  console.log(key, object.key);
+}
 ```
 ### Function Scope
 Variables have ***function scope***
