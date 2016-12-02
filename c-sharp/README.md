@@ -1,5 +1,7 @@
 ## C# Tips
 - [Partial Classes](#partial-classes)
+- [Abstract Access Modifier](#abstract-access-modifier)
+- [Protected Access Modifier](#protected-access-modifier)
 
 ### Partial Classes
 ***Partial Classes*** are used when you need to access a class in multiple files.
@@ -37,10 +39,10 @@ namespace Foo {
 }
 ```
 
-### Abstract Classes
-***Abstract Classes*** can not be instantiated. The *abstract* thing you are writing is promised to be used as a base for other implementations.
+### Abstract Access Modifier
+Variables using the ***Abstract Access Modifier*** can not be instantiated. The *abstract* thing you are writing is promised to be used as a base for other implementations.
 ```c#
-// Example Abstract Classes:
+// Example Abstract Access Modifiers:
 
 namespace Foo {
   abstract class Vehicle {
@@ -57,5 +59,32 @@ namespace Foo {
   public void Main() {
     Car car = new Car(); // Will know about abstract methods from Vehicle
   }
+}
+```
+
+### Protected Access Modifier
+Variables using the ***Protected Access Modifier*** are accessible within it's class and derived classes.
+```c#
+// Example Protected Classes:
+
+namespace Foo {
+    class Bar {
+        protected int x = 123;
+    }
+
+    class Zoo : Bar {
+        static void Main()
+        {
+            Bar bar = new Bar();
+            Zoo zoo = new Zoo();
+
+            // Error CS1540, because x can only be accessed by
+            // classes derived from Bar.
+            // bar.x = 10; 
+
+            // OK, because this class derives from Bar.
+            zoo.x = 10;
+        }
+    }
 }
 ```
