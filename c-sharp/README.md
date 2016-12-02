@@ -54,6 +54,8 @@ namespace Foo {
       // base.constructor();
     }
   }
-  Car car = new Car(); // Will know about abstract methods from Vehicle
+  public void Main() {
+    Car car = new Car(); // Will know about abstract methods from Vehicle
+  }
 }
 ```
