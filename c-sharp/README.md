@@ -36,3 +36,24 @@ namespace Foo {
   }
 }
 ```
+
+### Abstract Classes
+***Abstract Classes*** can not be instantiated. The *abstract* thing you are writing is promised to be used as a base for other implementations.
+```c#
+// Example Abstract Classes:
+
+namespace Foo {
+  abstract class Vehicle {
+     public abstract Car() {
+      // Constructor
+    }
+  }
+  class Car : Vehicle {
+    public override Car() {
+      // Constructor
+      // base.constructor();
+    }
+  }
+  Car car = new Car(); // Will know about abstract methods from Vehicle
+}
+```
