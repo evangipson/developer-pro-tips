@@ -1,5 +1,6 @@
 ## C# Tips
 - [Partial Classes](#partial-classes)
+- [Access Modifiers](#access-modifiers)
 - [Abstract Access Modifier](#abstract-access-modifier)
 - [Protected Access Modifier](#protected-access-modifier)
 
@@ -38,6 +39,17 @@ namespace Foo {
   }
 }
 ```
+
+### Access Modifiers
+In C#, we use ***access modifiers*** to control the scope of the data. Here is a simple referencial table for all of C#'s basic access modifiers:
+
+|Accessibility|Meaning|
+|---|---|
+|```public```|Access is not restricted.|
+|```protected```|Access is limited to the containing class or types derived from the containing class.|
+|```internal```|Access is limited to the current assembly.|
+|```protected internal```|Access is limited to the current assembly or types derived from the containing class.|
+|```private```|Access is limited to the containing type.|
 
 ### Abstract Access Modifier
 Variables using the ***Abstract Access Modifier*** can not be instantiated. The *abstract* thing you are writing is promised to be used as a base for other implementations.
