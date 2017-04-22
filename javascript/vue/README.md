@@ -175,6 +175,7 @@ Take the follow Vue components point-of-view for an app:
     <a src="#">Profile</a>
   </nav>
 </template>
+
 <script>
 export default {
   data() {
