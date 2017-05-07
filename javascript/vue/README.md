@@ -133,6 +133,20 @@ This code will output
 3. Build something awesome
 ```
 
+### Looping through Objects vs. Looping through Arrays
+You can attain different data based on how you iterate over them. Take the following example:
+```
+// Looping through an array, will output values.
+<div v-for="arrayElement in targetArray">
+    <p>{{ arrayElement }}</p>
+</div>
+
+// Looping through object, will ouptput key and value.
+<div v-for="(key, value) in targetObject">
+    <p>{{key}}: {{value}}</p>
+</div>
+```
+
 ## User Input
 Handling user input is so easy in Vue - it shouldn't even work!
 ```
