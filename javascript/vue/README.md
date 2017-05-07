@@ -1,3 +1,14 @@
+## JavaScript tips
+- [What *is* Vue?](#what-is-vue)
+- [How do I use it?](#how-do-i-use-it)
+- [Rendering Data](#rendering-data)
+- [Conditionally Rendering Data](#conditionally-rendering-data)
+- [Loops](#loops)
+- [User Input](#user-input)
+- [Composing Views With Components](#composing-views-with-components)
+- [Reactivity](#reactivity)
+- [Lifecycle](#lifecycle)
+
 ## What *is* Vue?
 [Vue](https://vuejs.org/) is a **progressive framework** written in javascript to build user interfaces. The core library is focused on the **View layer** of the MVC model only, and it's easy to integrate with other libraries or existing projects. Do you want a deeper dive into frameworks and why you should pick Vue? Check out this [comparison of Vue against other modern frameworks](https://vuejs.org/v2/guide/comparison.html).
 
