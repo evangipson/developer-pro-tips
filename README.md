@@ -32,3 +32,5 @@ A collection of rules to ensure success in your development career, licensed und
   - You don't want to call in a JavaScript guy to change an image color, and you don't want to call a CSS guy to add and remove a class from an element conditionally.
 - Use for loops when adding and/or removing items from the collection or when the index needs special attention.
   - Conversely, use foreach loops when you don't need the index and aren't adding or removing from the collection.
+- How to name things well
+  - Write down the "long name" of the function or variable. What is it actually doing, avoiding programming/generic words (e.g.; "update", "toggle", "handle"). After you have the long name, condense it and see what you can come up with.
