@@ -165,25 +165,7 @@ startAsObject();
 startAsIncrement();
 ```
 ### Module Patterns
-- If you'd like to break your javascript into multiple files, you're going to have utilize a ***module pattern***, with some **loose augmentation**.
-```javascript
-// File A, or the file that needs to load first.
-
-/* FOO isn't created yet, and that's what the "FOO || {}" is
- * doing in the Loosely Augmented Function Expression below.
- * The logic is "if we don't already have a FOO defined, let's make
- * one, otherwise, we can just augment the existing FOO (fooModule)
- * before we return it. */
-
-var FOO = (function(fooModule) {
-  // Initial data
-  fooModule.greeting = "Hello";
-  // Ensure our other file has access
-  // the .greeting we set up above by returning
-  // the module before FOO has finished executing.
-  return fooModule;
-}}(FOO || {})); // Loosely Augmented Function Expression
-```
+#### Augmentation
 ```javascript
 // File B, or the file that depends on File A to load.
 
@@ -207,6 +189,39 @@ var FOO = (function(fooModule) {
 
 FOO.augmentedGreeting(); // returns "Hello World!"
 ```
+#### Loose Augmentation
+- If you'd like to break your javascript into multiple files, you're going to have utilize a ***module pattern***, with some **loose augmentation**.
+```javascript
+// File A, or the file that needs to load first.
+
+/* FOO isn't created yet, and that's what the "FOO || {}" is
+ * doing in the Loosely Augmented Function Expression below.
+ * The logic is "if we don't already have a FOO defined, let's make
+ * one, otherwise, we can just augment the existing FOO (fooModule)
+ * before we return it. */
+
+var FOO = (function(fooModule) {
+  // Initial data
+  fooModule.greeting = "Hello";
+  // Ensure our other file has access
+  // the .greeting we set up above by returning
+  // the module before FOO has finished executing.
+  return fooModule;
+}}(FOO || {})); // Loosely Augmented Function Expression
+```
+#### Exports and Imports
+*Note: This feature is not implemented in any browsers natively at this time. It is implemented in many transpilers, such as [Babel](https://babeljs.io/) and [Webpack](https://webpack.github.io/).*
+- **Exports** are great for when you need to break things across files! There are two ways **```export```** can be used.
+  - ```export default``` is good when there is only 1 thing to be exported by the file. It allows for easy importing!
+    - ```export default function() { // stuff }``` will yield ```import Foo from "./first-file";``` and then ```typeof Foo === "function"; // true!```.
+  - **named ```export```s** allow you to export multiple things per file, and can be imported one of two ways.
+    - ```export const Foo = 15;``` will allow you to write ```import {Foo} from "./first-file";``` and then ```Foo = 15; // true```.
+    - ```export const Foo function(){ // stuff };``` will allow you to write ```import {Foo} from "./first-file";``` and then ```typeof Foo === "function"; // true!```.
+- ```import``` is a little more straightforward:
+  - ```import Foo from "./package"``` will **import** the **default export** in the **local** *"./package"*.
+  - ```import Foo from "package"``` will **import** the **default export** in the **global** *"package"*.
+  - ```import * as Foo from "package"``` will **import** any **export** in the global *"package"*.
+  - ```import {Foo} from "package"``` will **import** an **export named "Foo"** in the global *"package"*.
 
 ## Terminology
 **Hoisted:** Function declarations and function variables are always moved (‘hoisted’) to the top of their JavaScript scope by the JavaScript interpreter.
