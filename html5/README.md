@@ -1,4 +1,4 @@
-## HTML5 & CSS3 tips
+## HTML Tips
 - Data attributes exist and are excellent for interacting with a database, or just between javascript/css/html.
 - When making relative paths, think of what is likely to move.
   - Generally use just a forward slash off the root. If you are using "../", you need a good reason.
