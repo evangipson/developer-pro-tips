@@ -35,3 +35,5 @@ A collection of rules to ensure success in your development career, licensed und
 - How to name things well
   - Describe what the function or variable is doing in a sentence (give the "long form"). What is it actually doing, avoiding programming/generic words (e.g.; "update", "toggle", "handle"). After you have the long name, condense it into a few words and see what you can come up with.
   - A non-programmer should be able to read your variables and function names and understand what they are doing.
+- Don't trust package managers to add things correctly to your solution
+  - Review each change like you would your own commit (very closely).
